@@ -87,14 +87,16 @@ header .icons a:hover{
 }
 
 #menu-bars{
-    font-size: 2.5rem;
+    font-size: 3rem;
     padding: .5rem 1rem;
-    border: .1rem solid var(--black);
+   
     color: var(--black);
     border-radius: .3rem;
     cursor: pointer;
     display: none;
 }
+
+
 
 
 
@@ -118,11 +120,53 @@ header .icons a:hover{
     }
 }
 @media (max-width:768px){
+
+    #menu-bars{
+        display: block;
+
+    }
+    #menu-bars.fa-window-close{
+        color: var(--orange);
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        
+        left: -100%;
+        background: var(--black);
+        padding: 0;
+        border-top : .1rem solid var(--black);
+        border-bottom : .1rem solid var(--black); 
+        width: 100%;
+       
+      
+    }
+    header .navbar.active{
+        left: 0;
+    }
+
+     header .navbar a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 1rem 1.5rem;
+        color: #eee;
+     }
+
+     header .navbar a:hover{
+        background-color: #fff;
+     }
 }
 @media (max-width:450px){
      html{
         font-size: 50%;
     }
+    
+}
+
+body{
+    height: 300rem;
 }
 
 
